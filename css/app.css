@@ -1,34 +1,10 @@
-/* @font-face {
-	font-family: 'Proxima Nova';
-	src: url(../fonts/ProximaNova-Bold.woff2) format("woff2"), url(../fonts/ProximaNova-Bold.woff) format("woff");
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap
-}
-
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url(../fonts/ProximaNova-Medium.woff2) format("woff2"), url(../fonts/ProximaNova-Medium.woff) format("woff");
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap
-}
-
-@font-face {
-	font-family: 'Proxima Nova';
-	src: url(../fonts/ProximaNova-Regular.woff2) format("woff2"), url(../fonts/ProximaNova-Regular.woff) format("woff");
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap
-} */
-
 :root {
 	--app-height: 100%
 }
 
 .h0 {
 	color: #10324c;
-	font: normal 700 60px/1.2 "Proxima Nova";
+	font: normal 700 60px/1.2 sans-serif;
 	letter-spacing: -.02em
 }
 
@@ -46,7 +22,7 @@
 
 .h2-bigger {
 	color: #10324c;
-	font: normal 700 48px/1.2 "Proxima Nova";
+	font: normal 700 48px/1.2 sans-serif;
 	letter-spacing: -.02em
 }
 
@@ -62,10 +38,9 @@
 	}
 }
 
-.h1,
-h1 {
+.h1,h1 {
 	color: #10324c;
-	font: normal 700 32px/1.2 "Proxima Nova";
+	font: normal 700 32px/1.2 sans-serif;
 	letter-spacing: -.02em
 }
 
@@ -88,7 +63,7 @@ h1 {
 .h2,
 h2 {
 	color: #10324c;
-	font: normal 700 28px/1.28 "Proxima Nova";
+	font: normal 700 28px/1.28 sans-serif;
 	letter-spacing: -.02em
 }
 
@@ -103,7 +78,7 @@ h2 {
 .h3,
 h3 {
 	color: #10324c;
-	font: normal 700 22px/1.38 "Proxima Nova";
+	font: normal 700 22px/1.38 sans-serif;
 	letter-spacing: -.02em
 }
 
@@ -127,7 +102,7 @@ h3 {
 .h4,
 h4 {
 	color: #10324c;
-	font: normal 700 18px/1.28 "Proxima Nova";
+	font: normal 700 18px/1.28 sans-serif;
 	letter-spacing: -.02em
 }
 
@@ -150,7 +125,7 @@ h4 {
 .h5,
 h5 {
 	color: #10324c;
-	font: normal 700 16px/1.48 "Proxima Nova";
+	font: normal 700 16px/1.48 sans-serif;
 	letter-spacing: -.02em
 }
 
@@ -174,7 +149,7 @@ h5 {
 .h6,
 h6 {
 	color: #10324c;
-	font: normal 700 14px/1.4 "Proxima Nova"
+	font: normal 700 14px/1.4 sans-serif
 }
 
 @media (min-width:1200px) {
@@ -188,7 +163,7 @@ h6 {
 
 .ss-body-large {
 	color: #3b556b;
-	font: normal 500 20px/1.6 "Proxima Nova"
+	font: normal 500 20px/1.6 sans-serif
 }
 
 @media (min-width:1200px) {
@@ -199,7 +174,7 @@ h6 {
 
 .ss-body-medium {
 	color: #3b556b;
-	font: normal 500 18px/1.7 "Proxima Nova"
+	font: normal 500 18px/1.7 sans-serif
 }
 
 @media (min-width:1200px) {
@@ -211,7 +186,7 @@ h6 {
 
 .ss-body-small {
 	color: #3b556b;
-	font: normal 500 16px/1.6 "Proxima Nova"
+	font: normal 500 16px/1.6 sans-serif
 }
 
 @media (min-width:1200px) {
@@ -222,7 +197,7 @@ h6 {
 }
 
 .ss-body-xsmall {
-	font: normal 500 16px/1.6 "Proxima Nova"
+	font: normal 500 16px/1.6 sans-serif
 }
 
 .ss-header {
@@ -236,6 +211,7 @@ h6 {
 	top: 0;
 	z-index: 9999;
 	width: 100%;
+	height: 18%;
 	background-color: #fff
 }
 
@@ -1732,7 +1708,7 @@ body.admin-bar .ss-geo-banner {
 
 body {
 	color: #3b556b;
-	font: normal 500 16px/1.6 "Proxima Nova";
+	font: normal 500 16px/1.6 sans-serif;
 	padding-top: 72px
 }
 
@@ -1898,10 +1874,6 @@ a:hover {
 
 .grecaptcha-badge {
 	visibility: hidden
-}
-
-mjx-container[jax=SVG]>svg {
-	font-family: math
 }
 
 .wp-block-cgb-block-mux-video-block {
