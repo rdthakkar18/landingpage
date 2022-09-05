@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<script type="text/javascript">
+    		document.addEventListener('DOMContentLoaded', function() {
+             	fetchDetails();
+       	 	}, false);
+
+       	 	function fetchDetails(){
+    			event.preventDefault();
+				const url = 'http://localhost:8080/data/1';
+				fetch(
+					url,
+					{
+						headers: { "Content-Type": "application/json" },
+						method: "GET"
+					})
+				.then(function(response){ return response.json()})
+				.then(function(data){
+					console.log(data)
+					title=document.getElementById("Title");
+  					description=document.getElementById("Description");
+  					title.innerHTML = data.Title;
+  					description.innerHTML = data.Description;
+  					UpdateOldDetails();
+				});
+    		}
+
+    		function UpdateOldDetails(){
+    			event.preventDefault();
+				const data = new FormData(event.target);
+				const url = 'http://localhost:8080/olddata/1';
+				const jsonObject = Object.fromEntries(data.entries());
+				fetch(
+					url,
+					{
+						headers: { "Content-Type": "application/json" },
+						body: JSON.stringify(jsonObject),
+						method: "PUT"
+					})
+				.then(data => data.json())
+				.then((json) => {
+					alert('Details Updated');
+				});
+    		}
+
+    		function SubmitDetails(){
+    			event.preventDefault();
+				const data = new FormData(event.target);
+				const url = 'http://localhost:8080/data/1';
+				const jsonObject = Object.fromEntries(data.entries());
+				fetch(
+					url,
+					{
+						headers: { "Content-Type": "application/json" },
+						body: JSON.stringify(jsonObject),
+						method: "PUT"
+					})
+				.then(data => data.json())
+				.then((json) => {
+					alert('Details Updated');
+				});
+    		}
+    	</script>
+    </head>
+    <body onload="">
+        <form onsubmit="SubmitDetails()" method="POST">
+            <label>
+                Title: <br> <textarea id="Title" name="Title" rows="4" cols="50" placeholder="Title"></textarea>
+            </label>
+            <br>
+            <label>
+                Descreption: <br> <textarea id="Description" name="Description" rows="10" cols="50" placeholder="Description"></textarea>
+            </label>
+            <br>
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>

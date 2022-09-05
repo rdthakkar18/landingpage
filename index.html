@@ -41,6 +41,18 @@
             });
         })
     </script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+             userAction();
+        }, false);
+        const userAction = async () => {
+                const response = await fetch('http://localhost:8080/data');
+                const myJson = await response.json();
+                console.log(myJson);        
+                document.getElementById("Maiya_Title").innerHTML = myJson[0]["Title"];
+                document.getElementById("Maiya_Title_Description").innerHTML = myJson[0]["Description"];    
+        }
+    </script>
 </head>
 
 <body data-rsssl="1"
